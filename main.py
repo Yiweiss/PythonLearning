@@ -5,8 +5,8 @@ def display_main_menu():
     print("Enter some numbers separated by commas (e.g. 5,67, 32)")
 
 
-def get_user_input():
-    return [float(val) for val in input().split(",")]
+def get_user_input(_inp):
+    return [float(val) for val in _inp.split(",")]
 
 
 def calc_average(nums):
@@ -29,11 +29,11 @@ def calc_median(nums):
 
 def main():
     display_main_menu()
-    userInput = get_user_input()
+    userInput = get_user_input(input())
     print(userInput)
     print(calc_average(userInput))
     print(find_min_max(userInput))
-    print(sort(userInput))
+    print(sort(userInput))  
     print(calc_median(userInput))
 
 
